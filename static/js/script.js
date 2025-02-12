@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage.innerText = "";
         loading.style.display = "block";  // Show loading animation
     
-        fetch("/predict", {
+        fetch("https://your-flask-api.onrender.com/predict", {  // <-- UPDATED API URL
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ticker: ticker })
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             loading.style.display = "none";  // Hide loading animation
-            errorMessage.innerText = "Error fetching data. Try again.";
+            errorMessage.innerText = "Error fetching data. Check console.";
             console.error("Fetch error:", error);
         });
     }

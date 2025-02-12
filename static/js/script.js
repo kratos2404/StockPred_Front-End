@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage.innerText = "";
         loading.style.display = "block";  // Show loading animation
     
-        fetch("https://your-flask-api.onrender.com/predict", {  // <-- UPDATED API URL
+        fetch("https://stock-prediction-project.onrender.com", {  // <-- UPDATED API URL
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ticker: ticker })
